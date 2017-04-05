@@ -11,31 +11,62 @@
     <script type="text/javascript" src="/scripts/client.js"></script>
   </head>
   <body>
-    <h1>PEER 4</h1>
-    <div class='col-md-12' class="container">
-      <div ng-controller="ListingController">
+    <h1>SCIENCE FICTION ESTATE</h1>
+    <div class="container">
+      <!-- <div ng-controller="ListingController">
         <div ng-repeat="listing in dataArray">
           <table class=table-hover >
-            <thead>
-              <th>CITY</th>
-              <th>SQUARE FOOTAGE</th>
-              <th>AMOUNT</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="col-md-4">{{listing.city}}</td>
-                <td class="col-md-4">{{listing.sqft}}</td>
-                <td class="col-md-4" ng-show="listing.cost">{{'Cost  '+ listing.cost}} </td>
-                <td class="col-md-4" ng-show="listing.rent">{{'Rent '+listing.rent}}</td>
-
-              </tr>
-            </tbody>
-
-          </table>
-            <p></p>
-        </div>
-
+            <table class=table-hover >
+        <thead>
+          <th>CITY</th>
+          <th>SQUARE FOOTAGE</th>
+          <th>AMOUNT</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-md-4">{{listing.city}}</td>
+            <td class="col-md-2">{{listing.sqft}}</td>
+            <td class="col-md-2" ng-show="listing.cost">{{'Cost  '+ listing.cost}} </td>
+            <td class="col-md-2" ng-show="listing.rent">{{'Rent '+listing.rent}}</td>
+            <td><button type="button" class="btn btn-danger" class="col-md-2">DELETE</button><td>
+          </tr>
+        </tbody>
+      </table>
+    </div> -->
+    <div ng-controller="ListingController">
+      <div class="row">
+          <div class="col-md-3">
+              <h3>CITY</h3>
+          </div>
+          <div class="col-md-3">
+              <h3>SQUARE FOOTAGE</h3>
+          </div>
+          <div class="col-md-3">
+              <h3>AMOUNT</h3>
+          </div>
+          <div class="col-md-3">
+              <h3>SOLD/RENTED</h3>
+          </div>
       </div>
+
+      <div ng-repeat='listing in data'>
+          <div class="row" ng-click="setObjectID($index)">
+              <div class="col-md-3">
+                  <p>{{listing.city}}</p>
+              </div>
+              <div class="col-md-3">
+                  <p>{{listing.sqft}}</p>
+              </div>
+              <div class="col-md-3" id="currency-no-fractions">
+                  <p>{{listing.cost | currency}} {{listing.rent | currency}}</p>
+              </div>
+              <div class="col-md-3">
+                  <button ng-click='setObjectID($index)'>DELETE</button>
+              </div>
+          </div>
+        </div>
+      </div>
+
 
     </div>
 
