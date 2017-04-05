@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app= "myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Real Estate List</title>
+
+    <link rel="stylesheet" href="/vendors/bootstrap.css" />
+
+    <script type="text/javascript" src="/vendors/angular.min.js"></script>
+    <script type="text/javascript" src="/scripts/data.js"></script>
+    <script type="text/javascript" src="/scripts/client.js"></script>
+  </head>
+  <body>
+    <h1>PEER 4</h1>
+    <div class='col-md-12' class="container">
+      <div ng-controller="ListingController">
+        <div ng-repeat="listing in dataArray">
+          <table class=table-hover >
+            <thead>
+              <th>CITY</th>
+              <th>SQUARE FOOTAGE</th>
+              <th>AMOUNT</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-md-4">{{listing.city}}</td>
+                <td class="col-md-4">{{listing.sqft}}</td>
+                <td class="col-md-4" ng-show="listing.cost">{{'Cost  '+ listing.cost}} </td>
+                <td class="col-md-4" ng-show="listing.rent">{{'Rent '+listing.rent}}</td>
+
+              </tr>
+            </tbody>
+
+          </table>
+            <p></p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "angular_peer_challenge",
+  "version": "1.0.0",
+  "description": "In this assignment, we are going to work with the list of information provided in the previous weekend challenge.  It has been updated for correct Javascript notation for an array. Meaning that you are not working with the response from  a server, but rather just an array of inforamtion.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server/app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "express": "^4.15.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrimeAcademy/peer_angular_01.git"
+  },
+  "bugs": {
+    "url": "https://github.com/PrimeAcademy/peer_angular_01/issues"
+  },
+  "homepage": "https://github.com/PrimeAcademy/peer_angular_01#readme"
+}
